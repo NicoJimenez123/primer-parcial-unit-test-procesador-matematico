@@ -47,6 +47,17 @@ namespace ProcesadorMatematicoTester
 
     public class TestDividir
     {
-
+        [Theory]
+        [InlineData(4, 2, 2)]
+        [InlineData(10, 6, 5)]
+        public void Dividir2EnterosPosivitos(int a, int b, int resultadoEsperado)
+        {
+            // Arrange
+            ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
+            // Act
+            procesadorMatematico.Dividir(a, b);
+            // Assert
+            Assert.Equal(resultadoEsperado, procesadorMatematico.getResultado());
+        }
     }
 }

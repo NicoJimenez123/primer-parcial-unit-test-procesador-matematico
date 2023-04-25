@@ -8,9 +8,9 @@ namespace primer_parcial_unit_test_procesador_matematico
 {
     public class ProcesadorMatematico
     {
-        private int _resultado;
+        private double _resultado;
 
-        public void Sumar(int primerNumero, int segundoNumero)
+        public void Sumar(double primerNumero, double segundoNumero)
         {
             this._resultado = primerNumero + segundoNumero;
             if (this.EsNegativo())
@@ -19,7 +19,7 @@ namespace primer_parcial_unit_test_procesador_matematico
             }
         }
 
-        public void Dividir(int dividendo, int divisor)
+        public void Dividir(double dividendo, double divisor)
         {
             this._resultado = dividendo / divisor;
             if (this.EsNegativo())
@@ -32,7 +32,7 @@ namespace primer_parcial_unit_test_procesador_matematico
             return (this._resultado < 0);
         }
 
-        public void CalcularMayor(int primerNumero, int segundoNumero)
+        public void CalcularMayor(double primerNumero, double segundoNumero)
         {
             if (primerNumero > segundoNumero)
             {
@@ -48,7 +48,7 @@ namespace primer_parcial_unit_test_procesador_matematico
             }
         }
 
-        public int getResultado()
+        public double getResultado()
         {
             return this._resultado;
         }
