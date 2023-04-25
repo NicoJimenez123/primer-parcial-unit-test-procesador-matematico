@@ -47,5 +47,10 @@ namespace primer_parcial_unit_test_procesador_matematico
                 this._resultado = segundoNumero;
             }
         }
+
+        public int getResultado()
+        {
+            return this._resultado;
+        }
     }
 }
