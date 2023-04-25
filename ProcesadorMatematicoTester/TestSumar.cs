@@ -72,5 +72,18 @@ namespace ProcesadorMatematicoTester
             // Assert
             Assert.Equal(resultadoEsperado, procesadorMatematico.getResultado());
         }
+
+        [Theory]
+        [InlineData(-4, 2, 0)]
+        [InlineData(-10, 2, 0)]
+        public void Dividir1EnteroNegativo1EnteroPositivo(double a, double b, double resultadoEsperado)
+        {
+            // Arrange
+            ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
+            // Act
+            procesadorMatematico.Dividir(a, b);
+            // Assert
+            Assert.Equal(resultadoEsperado, procesadorMatematico.getResultado());
+        }
     }
 }
