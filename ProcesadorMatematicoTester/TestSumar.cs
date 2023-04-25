@@ -2,7 +2,7 @@ using Xunit;
 
 namespace ProcesadorMatematicoTester
 {
-    public class UnitTest1
+    public class TestSumar
     {
         [Fact]
         public void Test1()
