@@ -89,6 +89,18 @@ namespace ProcesadorMatematicoTester
 
     public class TestCalcularMayor
     {
-
+        [Theory]
+        [InlineData(4, 2, 4)]
+        [InlineData(10, 20, 20)]
+        [InlineData(20, 20, 20)]
+        public void CalcularMayor2EnterosPositivos(double a, double b, double resultadoEsperado)
+        {
+            // Arrange
+            ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
+            // Act
+            procesadorMatematico.CalcularMayor(a, b);
+            // Assert
+            Assert.Equal(resultadoEsperado, procesadorMatematico.getResultado());
+        }
     }
 }
