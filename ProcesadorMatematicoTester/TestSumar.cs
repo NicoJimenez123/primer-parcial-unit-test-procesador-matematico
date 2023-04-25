@@ -102,5 +102,19 @@ namespace ProcesadorMatematicoTester
             // Assert
             Assert.Equal(resultadoEsperado, procesadorMatematico.getResultado());
         }
+
+        [Theory]
+        [InlineData(-4, -2, -2)]
+        [InlineData(-10, -20, -10)]
+        [InlineData(-20, -20, -20)]
+        public void CalcularMayor2EnterosNegativos(double a, double b, double resultadoEsperado)
+        {
+            // Arrange
+            ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
+            // Act
+            procesadorMatematico.CalcularMayor(a, b);
+            // Assert
+            Assert.Equal(resultadoEsperado, procesadorMatematico.getResultado());
+        }
     }
 }
