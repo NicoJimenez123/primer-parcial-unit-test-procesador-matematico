@@ -8,7 +8,7 @@ namespace ProcesadorMatematicoTester
         [Theory]
         [InlineData(1, 2, 3)]
         [InlineData(3, 3, 6)]
-        public void Sumar2ValoresEnteros(int a, int b, int resultadoEsperado)
+        public void Sumar2ValoresEnterosPositivos(int a, int b, int resultadoEsperado)
         {
             // Arrange
             ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
