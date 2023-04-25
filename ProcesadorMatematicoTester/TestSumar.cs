@@ -86,4 +86,9 @@ namespace ProcesadorMatematicoTester
             Assert.Equal(resultadoEsperado, procesadorMatematico.getResultado());
         }
     }
+
+    public class TestCalcularMayor
+    {
+
+    }
 }
