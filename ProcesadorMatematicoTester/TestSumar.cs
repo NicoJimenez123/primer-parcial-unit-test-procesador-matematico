@@ -5,14 +5,17 @@ namespace ProcesadorMatematicoTester
 {
     public class TestSumar
     {
-        [Fact]
-        public void Sumar2ValoresEnteros()
+        [Theory]
+        [InlineData(1, 2, 3)]
+        [InlineData(3, 3, 6)]
+        public void Sumar2ValoresEnteros(int a, int b, int resultadoEsperado)
         {
             // Arrange
             ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
-
             // Act
+            int suma = procesadorMatematico.Sumar(a, b);
             // Assert
+            Assert.Equal(resultadoEsperado, suma);
         }
     }
 }
