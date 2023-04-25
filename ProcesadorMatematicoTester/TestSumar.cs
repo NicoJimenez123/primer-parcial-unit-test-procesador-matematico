@@ -17,5 +17,18 @@ namespace ProcesadorMatematicoTester
             // Assert
             Assert.Equal(resultadoEsperado, procesadorMatematico.getResultado());
         }
+
+        [Theory]
+        [InlineData(-1, -2, 0)]
+        [InlineData(-3, -3, 0)]
+        public void Sumar2ValoresEnterosNegativos(int a, int b, int resultadoEsperado)
+        {
+            // Arrange
+            ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
+            // Act
+            procesadorMatematico.Sumar(a, b);
+            // Assert
+            Assert.Equal(resultadoEsperado, procesadorMatematico.getResultado());
+        }
     }
 }
