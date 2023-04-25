@@ -13,9 +13,9 @@ namespace ProcesadorMatematicoTester
             // Arrange
             ProcesadorMatematico procesadorMatematico = new ProcesadorMatematico();
             // Act
-            int suma = procesadorMatematico.Sumar(a, b);
+            procesadorMatematico.Sumar(a, b);
             // Assert
-            Assert.Equal(resultadoEsperado, suma);
+            Assert.Equal(resultadoEsperado, procesadorMatematico.getResultado());
         }
     }
 }
